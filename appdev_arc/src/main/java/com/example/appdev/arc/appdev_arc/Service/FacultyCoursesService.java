@@ -1,12 +1,12 @@
-package com.example.appdev.arc.appdev_arc.Service;
+package com.example.appdev.arc.appdev_arc.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.appdev.arc.appdev_arc.Entity.FacultyCourses;
-import com.example.appdev.arc.appdev_arc.Repository.FacultyCoursesRepository;
+import com.example.appdev.arc.appdev_arc.entity.FacultyCourses;
+import com.example.appdev.arc.appdev_arc.repository.FacultyCoursesRepository;
 
 import lombok.RequiredArgsConstructor;
 

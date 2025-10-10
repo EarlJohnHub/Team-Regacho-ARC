@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.Controller;
+package com.example.appdev.arc.appdev_arc.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.appdev.arc.appdev_arc.Entity.FacultyCourses;
-import com.example.appdev.arc.appdev_arc.Service.FacultyCoursesService;
+import com.example.appdev.arc.appdev_arc.entity.FacultyCourses;
+import com.example.appdev.arc.appdev_arc.service.FacultyCoursesService;
 
 import lombok.RequiredArgsConstructor;
 

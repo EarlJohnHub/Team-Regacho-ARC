@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.Entity;
+package com.example.appdev.arc.appdev_arc.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
