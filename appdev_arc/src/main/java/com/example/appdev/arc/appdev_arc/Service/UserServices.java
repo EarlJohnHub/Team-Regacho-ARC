@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.service;
+package com.example.appdev.arc.appdev_arc.Service;
 
 import org.springframework.stereotype.Service;
 
