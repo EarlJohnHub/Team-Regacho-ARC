@@ -1,9 +1,9 @@
-package com.example.appdev.arc.appdev_arc.Service;
+package com.example.appdev.arc.appdev_arc.service;
 
 import java.util.*;
 import org.springframework.stereotype.Service;
-import com.example.appdev.arc.appdev_arc.Entity.ConsultationEntity;
-import com.example.appdev.arc.appdev_arc.Repository.ConsultationRepository;
+import com.example.appdev.arc.appdev_arc.entity.ConsultationEntity;
+import com.example.appdev.arc.appdev_arc.repository.ConsultationRepository;
 
 import lombok.RequiredArgsConstructor;
 

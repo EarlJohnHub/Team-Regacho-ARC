@@ -1,12 +1,12 @@
-package com.example.appdev.arc.appdev_arc.Service;
+package com.example.appdev.arc.appdev_arc.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.appdev.arc.appdev_arc.Entity.FacultyCourses;
-import com.example.appdev.arc.appdev_arc.Repository.FacultyCoursesRepository;
+import com.example.appdev.arc.appdev_arc.entity.FacultyCoursesEntity;
+import com.example.appdev.arc.appdev_arc.repository.FacultyCoursesRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -17,17 +17,17 @@ public class FacultyCoursesService {
     private final FacultyCoursesRepository repository;
 
     // Create or Update
-    public FacultyCourses saveFacultyCourse(FacultyCourses facultyCourse) {
+    public FacultyCoursesEntity saveFacultyCourse(FacultyCoursesEntity facultyCourse) {
         return repository.save(facultyCourse);
     }
 
     // Read all
-    public List<FacultyCourses> getAllFacultyCourses() {
+    public List<FacultyCoursesEntity> getAllFacultyCourses() {
         return repository.findAll();
     }
 
     // Read by ID
-    public Optional<FacultyCourses> getFacultyCourseById(int id) {
+    public Optional<FacultyCoursesEntity> getFacultyCourseById(int id) {
         return repository.findById(id);
     }
 

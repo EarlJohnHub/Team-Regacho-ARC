@@ -1,9 +1,9 @@
-package com.example.appdev.arc.appdev_arc.Service;
+package com.example.appdev.arc.appdev_arc.service;
 
 import java.util.*;
 import org.springframework.stereotype.Service;
-import com.example.appdev.arc.appdev_arc.Entity.ResearchProposalEntity;
-import com.example.appdev.arc.appdev_arc.Repository.ResearchProposalRepository;
+import com.example.appdev.arc.appdev_arc.entity.ResearchProposalEntity;
+import com.example.appdev.arc.appdev_arc.repository.ResearchProposalRepository;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.Entity;
+package com.example.appdev.arc.appdev_arc.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import lombok.Data;
 @Entity
 @Table(name = "faculty_courses")
 @Data                    
-public class FacultyCourses {
+public class FacultyCoursesEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int facultyCourseId;

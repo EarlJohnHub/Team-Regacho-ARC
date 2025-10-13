@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.Controller;
+package com.example.appdev.arc.appdev_arc.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.appdev.arc.appdev_arc.Entity.FacultyCourses;
-import com.example.appdev.arc.appdev_arc.Service.FacultyCoursesService;
+import com.example.appdev.arc.appdev_arc.entity.FacultyCoursesEntity;
+import com.example.appdev.arc.appdev_arc.service.FacultyCoursesService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -26,25 +26,25 @@ public class FacultyCoursesController {
 
     // CREATE
     @PostMapping
-    public FacultyCourses create(@RequestBody FacultyCourses facultyCourse) {
+    public FacultyCoursesEntity create(@RequestBody FacultyCoursesEntity facultyCourse) {
         return service.saveFacultyCourse(facultyCourse);
     }
 
     // READ ALL
     @GetMapping
-    public List<FacultyCourses> getAll() {
+    public List<FacultyCoursesEntity> getAll() {
         return service.getAllFacultyCourses();
     }
 
     // READ ONE
     @GetMapping("/{id}")
-    public Optional<FacultyCourses> getOne(@PathVariable int id) {
+    public Optional<FacultyCoursesEntity> getOne(@PathVariable int id) {
         return service.getFacultyCourseById(id);
     }
 
     // UPDATE
     @PutMapping("/{id}")
-    public FacultyCourses update(@PathVariable int id, @RequestBody FacultyCourses facultyCourse) {
+    public FacultyCoursesEntity update(@PathVariable int id, @RequestBody FacultyCoursesEntity facultyCourse) {
         facultyCourse.setFacultyCourseId(id);
         return service.saveFacultyCourse(facultyCourse);
     }

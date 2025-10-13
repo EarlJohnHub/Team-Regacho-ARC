@@ -1,8 +1,7 @@
-package com.example.appdev.arc.appdev_arc.Service;
+package com.example.appdev.arc.appdev_arc.service;
 
-import com.example.appdev.arc.appdev_arc.Entity.College;
-import com.example.appdev.arc.appdev_arc.Repository.CollegeRepository;
-import lombok.NoArgsConstructor;
+import com.example.appdev.arc.appdev_arc.entity.CollegeEntity;
+import com.example.appdev.arc.appdev_arc.repository.CollegeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +14,11 @@ public class CollegeService {
 
     private final CollegeRepository collegeRepository;
 
-    public College saveCollege(College college) {return collegeRepository.save(college);}
+    public CollegeEntity saveCollege(CollegeEntity college) {return collegeRepository.save(college);}
 
-    public List<College> getAllColleges() {return collegeRepository.findAll();}
+    public List<CollegeEntity> getAllColleges() {return collegeRepository.findAll();}
 
-    public Optional<College> findById(int id) {return collegeRepository.findById(id);}
+    public Optional<CollegeEntity> findById(int id) {return collegeRepository.findById(id);}
 
     public void deleteCollege(int id) {collegeRepository.deleteById(id);}
 }

@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.Entity;
+package com.example.appdev.arc.appdev_arc.entity;
 
 import lombok.Data;
 

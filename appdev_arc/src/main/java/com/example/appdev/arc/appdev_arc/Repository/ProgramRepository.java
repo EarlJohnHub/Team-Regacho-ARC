@@ -1,9 +1,12 @@
 package com.example.appdev.arc.appdev_arc.repository;
 
-import com.example.appdev.arc.appdev_arc.entity.CollegeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.example.appdev.arc.appdev_arc.entity.ProgramEntity;
+
+
 @Repository
-public interface CollegeRepository extends JpaRepository<CollegeEntity, Integer> {
+public interface ProgramRepository extends JpaRepository<ProgramEntity, Integer> {
+
 }

@@ -1,12 +1,12 @@
-package com.example.appdev.arc.appdev_arc.Controller;
+package com.example.appdev.arc.appdev_arc.controller;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import lombok.RequiredArgsConstructor;
 
 
-import com.example.appdev.arc.appdev_arc.Entity.ConsultationEntity;
-import com.example.appdev.arc.appdev_arc.Service.ConsultationService;
+import com.example.appdev.arc.appdev_arc.entity.ConsultationEntity;
+import com.example.appdev.arc.appdev_arc.service.ConsultationService;
 
 @RestController
 @RequestMapping("/consulation-proposals")

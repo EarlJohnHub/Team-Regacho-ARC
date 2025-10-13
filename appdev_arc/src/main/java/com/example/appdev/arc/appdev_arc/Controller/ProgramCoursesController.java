@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.Controller;
+package com.example.appdev.arc.appdev_arc.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.appdev.arc.appdev_arc.Entity.ProgramCourses;
-import com.example.appdev.arc.appdev_arc.Service.ProgramCoursesService;
+import com.example.appdev.arc.appdev_arc.entity.ProgramCoursesEntity;
+import com.example.appdev.arc.appdev_arc.service.ProgramCoursesService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -26,25 +26,25 @@ public class ProgramCoursesController {
 
     // CREATE
     @PostMapping
-    public ProgramCourses create(@RequestBody ProgramCourses programCourse) {
+    public ProgramCoursesEntity create(@RequestBody ProgramCoursesEntity programCourse) {
         return service.saveProgramCourse(programCourse);
     }
 
     // READ ALL
     @GetMapping
-    public List<ProgramCourses> getAll() {
+    public List<ProgramCoursesEntity> getAll() {
         return service.getAllProgramCourses();
     }
 
     // READ ONE
     @GetMapping("/{id}")
-    public Optional<ProgramCourses> getOne(@PathVariable int id) {
+    public Optional<ProgramCoursesEntity> getOne(@PathVariable int id) {
         return service.getProgramCourseById(id);
     }
 
     // UPDATE
     @PutMapping("/{id}")
-    public ProgramCourses update(@PathVariable int id, @RequestBody ProgramCourses programCourse) {
+    public ProgramCoursesEntity update(@PathVariable int id, @RequestBody ProgramCoursesEntity programCourse) {
         programCourse.setProgramCourseId(id);
         return service.saveProgramCourse(programCourse);
     }

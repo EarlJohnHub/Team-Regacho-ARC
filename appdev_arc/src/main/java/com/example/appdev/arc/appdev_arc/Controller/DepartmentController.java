@@ -1,41 +1,48 @@
-package com.example.appdev.arc.appdev_arc.Controller;
+package com.example.appdev.arc.appdev_arc.controller;
 
-import com.example.appdev.arc.appdev_arc.Entity.College;
-import com.example.appdev.arc.appdev_arc.Entity.Department;
-import com.example.appdev.arc.appdev_arc.Service.CollegeService;
-import com.example.appdev.arc.appdev_arc.Service.DepartmentService;
+
+import com.example.appdev.arc.appdev_arc.entity.DepartmentEntity;
+import com.example.appdev.arc.appdev_arc.service.*;
 import org.springframework.web.bind.annotation.*;
+
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 import java.util.Optional;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/department")
 public class DepartmentController {
 
     private final DepartmentService departmentService;
 
+    //added this because of error
+    // public DepartmentController(DepartmentService departmentService) {
+    //     this.departmentService = departmentService;
+    // }
+
     // CREATE
     @PostMapping
-    public Department create(@RequestBody Department department) {
+    public DepartmentEntity create(@RequestBody DepartmentEntity department) {
         return departmentService.saveDepartment(department);
     }
 
     // READ ALL
     @GetMapping
-    public List<Department> getAll() {
+    public List<DepartmentEntity> getAll() {
         return departmentService.getAllDepartment();
     }
 
     // READ ONE
     @GetMapping("/{id}")
-    public Optional<Department> getOne(@PathVariable int id) {
+    public Optional<DepartmentEntity> getOne(@PathVariable int id) {
         return departmentService.findById(id);
     }
 
     // UPDATE
     @PutMapping("/{id}")
-    public Department update(@PathVariable int id, @RequestBody Department department) {
+    public DepartmentEntity update(@PathVariable int id, @RequestBody DepartmentEntity department) {
         departmentService.findById(id);
         return departmentService.saveDepartment(department);
     }

@@ -1,4 +1,4 @@
-package com.example.appdev.arc.appdev_arc.Entity;
+package com.example.appdev.arc.appdev_arc.entity;
 import java.time.*;
 import java.util.*;
 import lombok.Data;

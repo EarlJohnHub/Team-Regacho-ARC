@@ -1,12 +1,12 @@
-package com.example.appdev.arc.appdev_arc.Controller;
+package com.example.appdev.arc.appdev_arc.controller;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import lombok.RequiredArgsConstructor;
 
 
-import com.example.appdev.arc.appdev_arc.Entity.ResearchProposalEntity;
-import com.example.appdev.arc.appdev_arc.Service.ResearchProposalService;
+import com.example.appdev.arc.appdev_arc.entity.ResearchProposalEntity;
+import com.example.appdev.arc.appdev_arc.service.ResearchProposalService;
 
 @RestController
 @RequestMapping("/research-proposals")

@@ -1,9 +1,8 @@
-package com.example.appdev.arc.appdev_arc.Controller;
+package com.example.appdev.arc.appdev_arc.controller;
 
-import com.example.appdev.arc.appdev_arc.Entity.College;
-import com.example.appdev.arc.appdev_arc.Service.CollegeService;
+import com.example.appdev.arc.appdev_arc.entity.CollegeEntity;
+import com.example.appdev.arc.appdev_arc.service.CollegeService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,25 +17,25 @@ public class CollegeController {
 
     // CREATE
     @PostMapping
-    public College create(@RequestBody College college) {
+    public CollegeEntity create(@RequestBody CollegeEntity college) {
         return collegeService.saveCollege(college);
     }
 
     // READ ALL
     @GetMapping
-    public List<College> getAll() {
+    public List<CollegeEntity> getAll() {
         return collegeService.getAllColleges();
     }
 
     // READ ONE
     @GetMapping("/{id}")
-    public Optional<College> getOne(@PathVariable int id) {
+    public Optional<CollegeEntity> getOne(@PathVariable int id) {
         return collegeService.findById(id);
     }
 
     // UPDATE
     @PutMapping("/{id}")
-    public College update(@PathVariable int id, @RequestBody College college) {
+    public CollegeEntity update(@PathVariable int id, @RequestBody CollegeEntity college) {
         collegeService.findById(id);
         return collegeService.saveCollege(college);
     }
