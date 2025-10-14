@@ -1,6 +1,9 @@
 package com.example.appdev.arc.appdev_arc.entity;
 import java.time.*;
 import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import jakarta.persistence.*;
@@ -34,17 +37,20 @@ public class ConsultationEntity {
 
     // foreign keys, uncomment onced other entities are created
 
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "student_id", referencedColumnName = "userID")
-    //private StudentEntity student;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "student_id", referencedColumnName = "userID")
+    @JsonBackReference("consultation-student")
+    private StudentEntity student;
 
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "faculty_id", referencedColumnName = "userID")
-    //private FacultyEntity faculty;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "faculty_id", referencedColumnName = "userID")
+    @JsonBackReference("consultation-faculty")
+    private FacultyEntity faculty;
 
     
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "proposal_id", referencedColumnName = "proposalID")
-    //private ResearchProposalEntity researchProposal;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "proposal_id", referencedColumnName = "proposal_id")
+    @JsonBackReference("consultation-proposal")
+    private ResearchProposalEntity researchProposal;
    
 }
