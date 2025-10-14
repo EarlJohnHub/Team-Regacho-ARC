@@ -40,7 +40,7 @@ public class FacultyService {
             faculty.setEmail(updatedFaculty.getEmail());
             faculty.setPassword(updatedFaculty.getPassword());
             faculty.setDepartment(updatedFaculty.getDepartment());
-            faculty.setConsultationId(updatedFaculty.getConsultationId());
+//            faculty.setConsultationId(updatedFaculty.getConsultationId());
             return faculty_repository.save(faculty);
         });
     }
