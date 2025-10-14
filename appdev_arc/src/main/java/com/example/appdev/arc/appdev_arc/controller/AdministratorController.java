@@ -1,4 +1,5 @@
 package com.example.appdev.arc.appdev_arc.controller;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/administrators")
+@RequiredArgsConstructor
 public class AdministratorController {
 
-    @Autowired
-    private AdministratorService administratorService;
+    private final AdministratorService administratorService;
 
     // READ ALL
     @GetMapping

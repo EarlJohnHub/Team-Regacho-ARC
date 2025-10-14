@@ -17,11 +17,6 @@ public class DepartmentController {
 
     private final DepartmentService departmentService;
 
-    //added this because of error
-    // public DepartmentController(DepartmentService departmentService) {
-    //     this.departmentService = departmentService;
-    // }
-
     // CREATE
     @PostMapping
     public DepartmentEntity create(@RequestBody DepartmentEntity department) {

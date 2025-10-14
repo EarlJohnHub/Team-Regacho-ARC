@@ -9,10 +9,8 @@ import com.example.appdev.arc.appdev_arc.entity.ConsultationEntity;
 import com.example.appdev.arc.appdev_arc.service.ConsultationService;
 
 @RestController
-@RequestMapping("/consulation-proposals")
+@RequestMapping("/consultation-proposals")
 @RequiredArgsConstructor
-
-
 public class ConsultationController {
 
     private final ConsultationService service;
