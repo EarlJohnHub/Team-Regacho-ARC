@@ -1,8 +1,12 @@
 package com.example.appdev.arc.appdev_arc.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -37,15 +41,8 @@ public class ResearchProposalEntity {
 
     // foreign keys, uncomment onced other entities are created
 
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "student_id", referencedColumnName = "userID")
-    //private StudentEntity student;
-
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "faculty_id", referencedColumnName = "userID")
-    //private FacultyEntity faculty;
-
-    //@OneToMany(mappedBy = "researchProposal", cascade = CascadeType.ALL, orphanRemoval = true)
-    //private List<ConsultationEntity> consultations = new ArrayList<>();
+    @OneToMany(mappedBy = "researchProposal", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference("consultation-proposal")
+    private List<ConsultationEntity> consultations = new ArrayList<>();
 
 }
