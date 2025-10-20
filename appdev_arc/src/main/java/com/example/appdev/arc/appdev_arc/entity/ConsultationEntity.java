@@ -11,6 +11,7 @@ import jakarta.persistence.*;
 @Data
 @Entity
 @Table(name = "consultations")
+// this is the consultationLog Entity | will keep the name as is for now
 public class ConsultationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +27,8 @@ public class ConsultationEntity {
     @Column(name = "status", nullable = false)
     private Status status;
     
-    @Column(name = "description")
-    private String description;
+    @Column(name = "remarks")
+    private String remarks;
 
     public enum Status {
         PENDING,
