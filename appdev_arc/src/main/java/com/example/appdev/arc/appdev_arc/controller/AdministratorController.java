@@ -1,6 +1,6 @@
 package com.example.appdev.arc.appdev_arc.controller;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.*;
 
 import com.example.appdev.arc.appdev_arc.entity.AdministratorEntity;
@@ -13,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AdministratorController {
 
+    
     private final AdministratorService administratorService;
 
     // READ ALL
