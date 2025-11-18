@@ -3,12 +3,15 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.Data;
+// import com.fasterxml.jackson.annotation.JsonManagedReference;
+// import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import jakarta.persistence.*;
 
-@Data
+@Setter
+@Getter
 @Entity
 @Table(name = "consultations")
 // this is the consultationLog Entity | will keep the name as is for now

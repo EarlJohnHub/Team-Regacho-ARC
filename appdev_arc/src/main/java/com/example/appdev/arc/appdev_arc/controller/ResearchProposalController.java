@@ -1,8 +1,8 @@
 package com.example.appdev.arc.appdev_arc.controller;
 
-import com.example.appdev.arc.appdev_arc.entity.FacultyEntity;
-import com.example.appdev.arc.appdev_arc.repository.FacultyRepository;
-import com.example.appdev.arc.appdev_arc.repository.StudentRepository;
+// import com.example.appdev.arc.appdev_arc.entity.FacultyEntity;
+// import com.example.appdev.arc.appdev_arc.repository.FacultyRepository;
+// import com.example.appdev.arc.appdev_arc.repository.StudentRepository;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import lombok.RequiredArgsConstructor;
