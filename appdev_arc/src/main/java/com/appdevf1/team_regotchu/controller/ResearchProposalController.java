@@ -1,0 +1,51 @@
+package com.appdevf1.team_regotchu.controller;
+
+// import com.example.appdev.arc.appdev_arc.entity.FacultyEntity;
+// import com.example.appdev.arc.appdev_arc.repository.FacultyRepository;
+// import com.example.appdev.arc.appdev_arc.repository.StudentRepository;
+import org.springframework.web.bind.annotation.*;
+import java.util.*;
+import lombok.RequiredArgsConstructor;
+
+
+import com.appdevf1.team_regotchu.entity.ResearchProposalEntity;
+import com.appdevf1.team_regotchu.service.ResearchProposalService;
+
+@RestController
+@RequestMapping("/research-proposals")
+@RequiredArgsConstructor
+public class ResearchProposalController {
+
+    private final ResearchProposalService service;
+
+    // CREATE
+    @PostMapping
+    public ResearchProposalEntity create(@RequestBody ResearchProposalEntity proposal) {
+        return service.saveResearchProposal(proposal);
+    }
+
+    // READ ALL
+    @GetMapping
+    public List<ResearchProposalEntity> getAll() {
+        return service.getAllResearchProposals();
+    }
+
+    // READ ONE
+    @GetMapping("/{id}")
+    public Optional<ResearchProposalEntity> getOne(@PathVariable int id) {
+        return service.getResearchProposalById(id);
+    }
+
+    // UPDATE
+    @PutMapping("/{id}")
+    public ResearchProposalEntity update(@PathVariable Long id, @RequestBody ResearchProposalEntity proposal) {
+        proposal.setProposal_id(id);
+        return service.saveResearchProposal(proposal);
+    }
+
+    // DELETE
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id) {
+        service.deleteResearchProposal(id);
+    }
+}
