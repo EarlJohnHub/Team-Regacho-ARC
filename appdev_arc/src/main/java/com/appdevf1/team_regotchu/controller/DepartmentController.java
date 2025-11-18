@@ -3,7 +3,6 @@ package com.appdevf1.team_regotchu.controller;
 
 import com.appdevf1.team_regotchu.entity.DepartmentEntity;
 import com.appdevf1.team_regotchu.service.DepartmentService;
-import com.appdevf1.team_regotchu.service.*;
 import org.springframework.web.bind.annotation.*;
 
 import lombok.RequiredArgsConstructor;

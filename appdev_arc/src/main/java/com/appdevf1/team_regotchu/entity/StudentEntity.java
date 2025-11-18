@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "Students")
+@Table(name = "students")
 public class StudentEntity extends UserEntity {
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)

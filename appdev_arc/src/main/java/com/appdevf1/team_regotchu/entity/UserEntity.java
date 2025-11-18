@@ -1,5 +1,8 @@
 package com.appdevf1.team_regotchu.entity;
 
+// Inside your UserEntity or DTO
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -14,10 +17,12 @@ public abstract class UserEntity {
     private int userID;
 
     @Column(nullable = false, unique = true)
+    @NotBlank(message = "Email is required and cannot be empty.")
+    @Email(message = "Email should be a valid email address.")
     private String email;
 
-
     @Column(nullable = false)
+    @NotBlank(message = "Password is required and cannot be empty.")
     private String password;
 
     private String name;

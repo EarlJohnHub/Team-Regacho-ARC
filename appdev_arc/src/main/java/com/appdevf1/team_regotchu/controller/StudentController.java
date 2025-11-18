@@ -1,6 +1,7 @@
 package com.appdevf1.team_regotchu.controller;
 
 import java.util.List;
+import jakarta.validation.Valid;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,7 +35,7 @@ public class StudentController {
     }
 
     @PostMapping
-    public StudentEntity createStudent(@RequestBody StudentEntity student) {
+    public StudentEntity createStudent(@Valid @RequestBody StudentEntity student) {
         return studentService.createStudent(student);
     }
 
