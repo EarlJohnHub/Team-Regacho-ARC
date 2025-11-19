@@ -30,6 +30,14 @@ public class CourseService {
         return courseRepository.findById(id);
     }
 
+    // update by id
+    public Optional<CourseEntity> updateCourse(int id, CourseEntity updatedCourse) {
+        return courseRepository.findById(id).map(course -> {
+            course.setCourseName(updatedCourse.getCourseName());
+            return courseRepository.save(course);
+        });
+    }
+
     // // Delete
     public void deleteCourse(int id) {
         courseRepository.deleteById(id);

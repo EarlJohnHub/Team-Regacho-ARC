@@ -34,6 +34,12 @@ public class ProgramController {
         return service.getProgramById(id);
     }
     
+    // update 
+    @PutMapping("/{id}")
+    public ProgramEntity updateProgram(@PathVariable Integer id, @RequestBody ProgramEntity updatedProgram) {
+        return service.updateProgram(id, updatedProgram).orElse(null);
+    }
+
     // delete
     @DeleteMapping("/{id}")
     public void delete(@PathVariable int id) {

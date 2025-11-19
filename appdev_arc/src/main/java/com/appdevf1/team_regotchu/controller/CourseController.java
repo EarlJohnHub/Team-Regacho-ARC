@@ -31,7 +31,12 @@ public class CourseController {
     @GetMapping("/{id}")
     public Optional<CourseEntity> getOne(@PathVariable int id) {
         return service.getCourseById(id);
-    } 
+    }
+    
+    @PutMapping("/{id}")
+    public CourseEntity updateCourse(@PathVariable Integer id, @RequestBody CourseEntity updatedCourse) {
+        return service.updateCourse(id, updatedCourse).orElse(null);
+    }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable int id) {

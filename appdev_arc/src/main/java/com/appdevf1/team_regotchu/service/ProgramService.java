@@ -31,6 +31,14 @@ public class ProgramService {
         return programRepository.findById(id);
     }
 
+    // update one
+    public Optional<ProgramEntity> updateProgram(int id, ProgramEntity updatedProgram) {
+        return programRepository.findById(id).map(program -> {
+            program.setProgramName(updatedProgram.getProgramName());
+            return programRepository.save(program);
+        });
+    }
+
     // Delete
     public void deleteProgram(int id) {
         programRepository.deleteById(id);
