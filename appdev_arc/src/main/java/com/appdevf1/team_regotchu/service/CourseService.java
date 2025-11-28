@@ -17,6 +17,7 @@ public class CourseService {
 
     // // Create or Update
     public CourseEntity saveCourse(CourseEntity course) {
+        // return courseRepository.save(Objects.requireNonNull(course)); <- idk why muyellow sa vscode but this one works, ensures course is not null
         return courseRepository.save(course);
     }
 
