@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import com.appdevf1.team_regotchu.entity.FacultyEntity;
 import com.appdevf1.team_regotchu.repository.FacultyRepository;
 
+import io.micrometer.common.lang.NonNull;
+
 
 @Service
 public class FacultyService {
@@ -45,7 +47,7 @@ public class FacultyService {
         });
     }
 
-
+//  if problem persists, the param should be "@NonNull int id" instead of Integer 
     public boolean deleteFaculty(Integer id) {
         if (faculty_repository.existsById(id)) {
             faculty_repository.deleteById(id);
