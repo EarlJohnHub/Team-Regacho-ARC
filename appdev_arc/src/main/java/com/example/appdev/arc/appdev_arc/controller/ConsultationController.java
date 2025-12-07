@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import lombok.RequiredArgsConstructor;
 
-
+ 
 import com.example.appdev.arc.appdev_arc.entity.ConsultationEntity;
 import com.example.appdev.arc.appdev_arc.service.ConsultationService;
 

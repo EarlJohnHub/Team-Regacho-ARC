@@ -2,7 +2,7 @@ package com.example.appdev.arc.appdev_arc.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
-
+ 
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
